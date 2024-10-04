@@ -5,7 +5,7 @@ import ChatWindow from "./components/ChatWindow.jsx";
 export default function Origin({ user, activeUserId }) {
   const renderMainContent = () => {
     if (!activeUserId) {
-      return <Empty activeUserId={activeUserId} user={activeUserId} />;
+      return <Empty activeUserId={activeUserId} user={user} />;
     }
     <ChatWindow activeUserId={activeUserId} />;
   };
