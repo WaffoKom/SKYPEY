@@ -1,6 +1,6 @@
 import { SET_ACTIVE_USER_ID } from "../constants/action-types.js";
 
-export const setACtiveUserId = (id) => ({
+export const setACtiveUserId = (user_id) => ({
   type: SET_ACTIVE_USER_ID,
-  payload: id,
+  payload: user_id,
 });
