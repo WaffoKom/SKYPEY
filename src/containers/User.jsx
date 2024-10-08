@@ -4,12 +4,8 @@ import store from "../store/index.js";
 import { setACtiveUserId } from "../actions/index.js";
 
 export default function User({ user }) {
-  function handleClickUser({ user_id }) {
-    console.log(user_id);
-
-    store.dispatch(setACtiveUserId(user_id));
-  }
   const { name, profile_pic, status } = user;
+
   return (
     <div className="User" onClick={handleClickUser.bind(null, user)}>
       <img src={profile_pic} alt={name} className="User_pic" />
@@ -19,4 +15,8 @@ export default function User({ user }) {
       </div>
     </div>
   );
+}
+function handleClickUser({ user_id }) {
+  console.log(user_id);
+  store.dispatch(setACtiveUserId(user_id));
 }
