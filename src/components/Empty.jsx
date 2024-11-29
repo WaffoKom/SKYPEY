@@ -1,5 +1,5 @@
-import React from "react";
 import "./Empty.css";
+
 export default function Empty({ user }) {
   const { name, profile_pic, status } = user;
   const first_name = name.split(" ")[0];
