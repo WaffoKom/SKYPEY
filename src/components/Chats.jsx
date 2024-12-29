@@ -1,5 +1,6 @@
 import "./Chats.css";
 import PropTypes from "prop-types";
+import { useEffect, useRef } from "react";
 const Chat = ({ message }) => {
   const { text, is_user_msg } = message;
   return (
@@ -8,8 +9,18 @@ const Chat = ({ message }) => {
 };
 
 const Chats = ({ messages }) => {
+  const chatRef = useRef(null);
+
+  const scrollToBottom = () => {
+    if (chatRef.current) {
+      chatRef.current.scrollTop = chatRef.current.scrollHeight;
+    }
+  };
+  useEffect(() => {
+    scrollToBottom();
+  }, [messages]);
   return (
-    <div className="Chats">
+    <div className="Chats" ref={chatRef}>
       {messages.map((message) => (
         <Chat message={message} key={message.number} />
       ))}
