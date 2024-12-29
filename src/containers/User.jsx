@@ -17,7 +17,7 @@ export default function User({ user }) {
   );
 }
 function handleClickUser({ user_id }) {
-  console.log(user_id);
+  // console.log(user_id);
   store.dispatch(setACtiveUserId(user_id));
 }
 
