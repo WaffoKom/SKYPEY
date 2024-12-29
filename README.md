@@ -8,7 +8,7 @@ Skypey est une application de messagerie instantanée construite avec React, Red
 - [Prérequis](#prérequis)
 - [Installation](#installation)
 - [Utilisation](#utilisation)
-- 
+  
 ## Fonctionnalités
 
 - Envoi et réception de messages en temps réel
