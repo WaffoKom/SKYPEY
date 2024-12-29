@@ -1,4 +1,3 @@
-import React from "react";
 import Sidebar from "../components/Sidebar.jsx";
 import Origin from "../Origin.jsx";
 import store from "../store/index.js";

@@ -2,17 +2,18 @@ import "./MessageInput.css";
 
 import store from "../store/index.js";
 import { sendMessage, setTypingValue } from "../actions";
-
+import PropTypes from "prop-types";
+const state = store.getState();
 export default function MessageInput({ value }) {
-  const state = store.getState();
+  const handleChange = (e) => {
+    store.dispatch(setTypingValue(e.target.value));
+  };
   const handleSubmit = (e) => {
     e.preventDefault();
     const { typing, activeUserId } = state;
     store.dispatch(sendMessage(typing, activeUserId));
   };
-  const handleChange = (e) => {
-    store.dispatch(setTypingValue(e.target.value));
-  };
+
   return (
     <form className="Message" onSubmit={handleSubmit}>
       <input
@@ -24,3 +25,7 @@ export default function MessageInput({ value }) {
     </form>
   );
 }
+
+MessageInput.propTypes = {
+  value: PropTypes.string.isRequired,
+};

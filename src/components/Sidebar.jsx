@@ -1,6 +1,6 @@
-import React from "react";
 import "./Sidebar.css";
 import User from "../containers/User.jsx";
+import PropTypes from "prop-types";
 
 export default function Sidebar({ contacts }) {
   return (
@@ -11,3 +11,7 @@ export default function Sidebar({ contacts }) {
     </aside>
   );
 }
+
+Sidebar.propTypes = {
+  contacts: PropTypes.array.isRequired,
+};

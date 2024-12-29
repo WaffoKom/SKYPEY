@@ -1,4 +1,5 @@
 import "./Empty.css";
+import PropTypes from "prop-types";
 
 export default function Empty({ user }) {
   const { name, profile_pic, status } = user;
@@ -18,3 +19,11 @@ export default function Empty({ user }) {
     </div>
   );
 }
+
+Empty.propTypes = {
+  user: PropTypes.shape({
+    name: PropTypes.string.isRequired,
+    status: PropTypes.string.isRequired,
+    profile_pic: PropTypes.string.isRequired,
+  }).isRequired,
+};

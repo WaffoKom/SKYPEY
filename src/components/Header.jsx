@@ -1,6 +1,5 @@
-import React from "react";
-
 import "./Header.css";
+import PropTypes from "prop-types";
 
 export default function Header({ user }) {
   const { name, status } = user;
@@ -11,3 +10,10 @@ export default function Header({ user }) {
     </header>
   );
 }
+
+Header.propTypes = {
+  user: PropTypes.shape({
+    name: PropTypes.string.isRequired,
+    status: PropTypes.string.isRequired,
+  }).isRequired,
+};

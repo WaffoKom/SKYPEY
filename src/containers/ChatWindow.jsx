@@ -4,6 +4,7 @@ import Header from "../components/Header.jsx";
 import Chats from "../components/Chats.jsx";
 import MessageInput from "./MessageInput.jsx";
 import _ from "lodash";
+import PropTypes from "prop-types";
 
 export default function ChatWindow({ activeUserId }) {
   const state = store.getState();
@@ -23,3 +24,7 @@ export default function ChatWindow({ activeUserId }) {
     </div>
   );
 }
+
+ChatWindow.propTypes = {
+  activeUserId: PropTypes.string.isRequired,
+};
