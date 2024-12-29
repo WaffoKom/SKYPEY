@@ -5,7 +5,7 @@ import PropTypes from "prop-types";
 export default function Origin({ user, activeUserId }) {
   const renderMainContent = () => {
     if (!activeUserId) {
-      return <Empty activeUserId={activeUserId} user={user} />;
+      return <Empty user={user} activeUserId={activeUserId} />;
     } else {
       return <ChatWindow activeUserId={activeUserId} />;
     }

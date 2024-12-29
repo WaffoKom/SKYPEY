@@ -15,11 +15,7 @@ export default function ChatWindow({ activeUserId }) {
   return (
     <div className="ChatWindow">
       <Header user={activeUser} />
-      <Chats
-        messages={_.values(activeMsgs).filter((m) => {
-          return m.text.length !== 0;
-        })}
-      />
+      <Chats messages={_.values(activeMsgs)} />
       <MessageInput value={typing} />
     </div>
   );

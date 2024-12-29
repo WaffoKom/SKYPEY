@@ -3,13 +3,14 @@ import "./MessageInput.css";
 import store from "../store/index.js";
 import { sendMessage, setTypingValue } from "../actions";
 import PropTypes from "prop-types";
-const state = store.getState();
+
 export default function MessageInput({ value }) {
   const handleChange = (e) => {
     store.dispatch(setTypingValue(e.target.value));
   };
   const handleSubmit = (e) => {
     e.preventDefault();
+    const state = store.getState();
     const { typing, activeUserId } = state;
     store.dispatch(sendMessage(typing, activeUserId));
   };
