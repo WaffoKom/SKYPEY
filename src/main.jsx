@@ -3,7 +3,6 @@ import { createRoot } from "react-dom/client";
 import App from "./containers/App.jsx";
 import "./index.css";
 import store from "./store/index.js";
-import * as serviceWorker from "./service.worker.js";
 
 const root = createRoot(document.getElementById("root"));
 function renderApp() {
@@ -20,5 +19,3 @@ function fancyLog() {
 }
 renderApp();
 store.subscribe(renderApp);
-
-serviceWorker.unregister();

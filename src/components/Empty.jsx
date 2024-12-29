@@ -1,6 +1,5 @@
 import "./Empty.css";
 import PropTypes from "prop-types";
-// Adjust the path as necessary
 
 export default function Empty({ user }) {
   const { name, profile_pic, status } = user;
@@ -13,7 +12,7 @@ export default function Empty({ user }) {
       <p className="Empty__status">
         <b>Status:</b> {status}
       </p>
-      <button className="Empty__btn">Start a conversation</button>
+      {/* <button className="Empty__btn">Start a conversation</button> */}
       <p className="Empty__info">
         Search for someone to start chatting with or go to Contacts to see who
         is available

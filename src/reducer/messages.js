@@ -8,7 +8,7 @@ export default function messages(state = getMessages(10), action) {
       const { message, userId } = action.payload;
       const AllUserMsgs = state[userId];
       const number = +_.keys(AllUserMsgs).pop() + 1;
-      print(number);
+      // print(number);
       return {
         ...state,
         [userId]: {
