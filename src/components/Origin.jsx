@@ -1,6 +1,6 @@
 import "./Origin.css";
-import Empty from "./components/Empty.jsx";
-import ChatWindow from "./containers/ChatWindow.jsx";
+import Empty from "./Empty.jsx";
+import ChatWindow from "../containers/ChatWindow.jsx";
 import PropTypes from "prop-types";
 export default function Origin({ user, activeUserId }) {
   const renderMainContent = () => {

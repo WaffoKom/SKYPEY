@@ -1,5 +1,5 @@
 import Sidebar from "../components/Sidebar.jsx";
-import Origin from "../Origin.jsx";
+import Origin from "../components/Origin.jsx";
 import store from "../store/index.js";
 import _ from "lodash";
 import "./App.css";
